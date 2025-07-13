@@ -30,3 +30,19 @@ body,
   width: 100%;
   min-height: 100vh;
 }
+
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s) linear infinite;
+  animation-play-state: running;
+}
+
+.hover\:\[animation-play-state\:paused\]:hover {
+  animation-play-state: paused;
+}

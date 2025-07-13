@@ -1,16 +1,136 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import GlowingStarsDemo from "./components/GlowingStarsDemo";
+import SpotlightPreview from "./components/SpotlightPreview";
+import AboutSection from "./components/AboutSection";
+import InfiniteMovingTechDemo from "./components/InfiniteMovingTechDemo";
+import { Separator } from "./components/ui/Separator";
+import CardHoverEffectDemo from "./components/CardHoverEffectDemo";
+import FloatingNavbar from "./components/ui/FloatingNavbar";
+import Contact from "./components/contact";
+import { ExperienceCard } from "./components/ui/ExperienceCard";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
+  if (isLoading) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          className="w-16 h-16 border-t-4 border-purple-500 rounded-full"
+        />
+      </div>
+    );
+  }
   return (
-    <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  )
+    <div className="bg-black">
+      <FloatingNavbar />
+
+      {/* Home section*/}
+      <div className="mb-auto" id="home">
+        <SpotlightPreview />
+      </div>
+      <div id="about">
+        {/* Separator 1  */}
+        <div className="flex justify-center w-full h-[10rem] ">
+          <div className="w-60">
+            <Separator label="ABOUT ME" gradient />
+          </div>
+        </div>
+
+        {/* About section */}
+        <div className="" id="about">
+          <AboutSection />
+        </div>
+      </div>
+      <div id="tools">
+        {/* Separator 2  */}
+        <div className="flex justify-center w-full h-[10rem] items-center">
+          <div className="w-60">
+            <Separator label="TOOLS" gradient />
+          </div>
+        </div>
+
+        {/* Skills section  */}
+        <div className="mt-16">
+          <InfiniteMovingTechDemo />
+        </div>
+      </div>
+      <div id="projects">
+        {/* Separator 3 */}
+        <div className="flex justify-center w-full h-[10rem] items-center">
+          <div className="w-60">
+            <Separator label="PROJECTS" gradient />
+          </div>
+        </div>
+
+        {/* project section */}
+        <div className="  ">
+          <CardHoverEffectDemo />
+        </div>
+      </div>
+      <div id="expreance">
+        {/* Separator 4 */}
+        <div className="flex justify-center w-full h-[10rem] items-center">
+          <div className="w-60">
+            <Separator label="EXPREANCE" gradient />
+          </div>
+        </div>
+   <div className="flex flex-col lg:flex-row items-center justify-center gap-10 flex-wrap">
+  <ExperienceCard
+    company="Tegain"
+    period="April 2024 - Present"
+    location="Kochi, Kerala"
+    description={`Develop and optimize user interfaces, improve front-end architecture, and enhance performance through modern development techniques, ensuring accessibility, cross-browser compatibility, and mobile responsiveness.\n\nCollaborate with design and back-end teams to create seamless user experiences, maintain high code quality through peer reviews, and implement cutting-edge technologies for progressive web applications.`}
+    className="my-6"
+  />
+
+
+
+  <ExperienceCard
+    company="The Capital Hub"
+    period="September 2023 - February 2024"
+    location="Bengaluru"
+    description={`As a developer focused on frontend responsibilities in the company, I had the authority to make decisions regarding structures, feature progression, and services, all while working closely with the rest of the team.\n\nEngaged in multiple projects, encompassing both live and in-development initiatives. Contributed technically while also offering innovative ideas and suggestions to enhance client satisfaction.`}
+    className="my-6"
+    width="332px"
+  />
+</div>
+
+      </div>
+
+      <div id="contact">
+        {/* Separator 5 */}
+        <div className="flex justify-center w-full h-[10rem] items-center">
+          <div className="w-60">
+            <Separator label="CONTACT" gradient />
+          </div>
+        </div>
+
+        {/* Contact section */}
+        <div className="h-[250px]">
+          <Contact />
+        </div>
+      </div>
+      <footer className="mt-20 mb-10 text-center text-sm text-gray-400 flex flex-col items-center ">
+        <p>© {new Date().getFullYear()} Jijin VJ. All rights reserved.</p>
+        <div className="w-65 h-[10px]">
+          <Separator />
+        </div>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
