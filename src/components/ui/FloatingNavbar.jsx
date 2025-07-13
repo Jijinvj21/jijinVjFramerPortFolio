@@ -24,7 +24,7 @@ const FloatingNavbar = () => {
     { id: "tools", label: "Tools", icon: <FaTools /> },
     { id: "projects", label: "Projects", icon: <FaProjectDiagram /> },
     { id: "expreance", label: "Experience", icon: <FaBriefcase /> },
-    { id: "contact", label: "Contact", icon: <FaEnvelope /> },
+    // { id: "contact", label: "Contact", icon: <FaEnvelope /> },
   ];
 
   useEffect(() => {

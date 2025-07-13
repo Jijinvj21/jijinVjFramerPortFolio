@@ -11,7 +11,7 @@ import InfiniteMovingTechDemo from "./components/InfiniteMovingTechDemo";
 import { Separator } from "./components/ui/Separator";
 import CardHoverEffectDemo from "./components/CardHoverEffectDemo";
 import FloatingNavbar from "./components/ui/FloatingNavbar";
-import Contact from "./components/contact";
+import Contact from "./components/Contact";
 import { ExperienceCard } from "./components/ui/ExperienceCard";
 
 function App() {
@@ -80,37 +80,34 @@ function App() {
           <CardHoverEffectDemo />
         </div>
       </div>
-      <div id="expreance">
+      <div id="expreance" className="">
         {/* Separator 4 */}
         <div className="flex justify-center w-full h-[10rem] items-center">
           <div className="w-60">
             <Separator label="EXPREANCE" gradient />
           </div>
         </div>
-   <div className="flex flex-col lg:flex-row items-center justify-center gap-10 flex-wrap">
-  <ExperienceCard
-    company="Tegain"
-    period="April 2024 - Present"
-    location="Kochi, Kerala"
-    description={`Develop and optimize user interfaces, improve front-end architecture, and enhance performance through modern development techniques, ensuring accessibility, cross-browser compatibility, and mobile responsiveness.\n\nCollaborate with design and back-end teams to create seamless user experiences, maintain high code quality through peer reviews, and implement cutting-edge technologies for progressive web applications.`}
-    className="my-6"
-  />
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 flex-wrap">
+          <ExperienceCard
+            company="Tegain"
+            period="April 2024 - Present"
+            location="Kochi, Kerala"
+            description={`Develop and optimize user interfaces, improve front-end architecture, and enhance performance through modern development techniques, ensuring accessibility, cross-browser compatibility, and mobile responsiveness.\n\nCollaborate with design and back-end teams to create seamless user experiences, maintain high code quality through peer reviews, and implement cutting-edge technologies for progressive web applications.`}
+            className="my-6"
+          />
 
-
-
-  <ExperienceCard
-    company="The Capital Hub"
-    period="September 2023 - February 2024"
-    location="Bengaluru"
-    description={`As a developer focused on frontend responsibilities in the company, I had the authority to make decisions regarding structures, feature progression, and services, all while working closely with the rest of the team.\n\nEngaged in multiple projects, encompassing both live and in-development initiatives. Contributed technically while also offering innovative ideas and suggestions to enhance client satisfaction.`}
-    className="my-6"
-    width="332px"
-  />
-</div>
-
+          <ExperienceCard
+            company="The Capital Hub"
+            period="September 2023 - February 2024"
+            location="Bengaluru"
+            description={`As a developer focused on frontend responsibilities in the company, I had the authority to make decisions regarding structures, feature progression, and services, all while working closely with the rest of the team.\n\nEngaged in multiple projects, encompassing both live and in-development initiatives. Contributed technically while also offering innovative ideas and suggestions to enhance client satisfaction.`}
+            className="my-6"
+            width="332px"
+          />
+        </div>
       </div>
 
-      <div id="contact">
+      <div id="contact" className="">
         {/* Separator 5 */}
         <div className="flex justify-center w-full h-[10rem] items-center">
           <div className="w-60">
