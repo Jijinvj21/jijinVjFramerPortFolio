@@ -48,23 +48,23 @@ export default function SpotlightPreview() {
             <div className="mb-4 md:mb-6 text-center">
               <GradualSpacing 
                 text="JIJIN VJ" 
-                className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-6xl font-bold text-transparent sm:text-3xl md:text-5xl lg:text-6xl" 
+                className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-6xl font-bold text-transparent sm:text-3xl md:text-5xl lg:text-6xl h-[80px]" 
               />
             </div>
             
-            <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-3xl font-bold text-transparent sm:text-3xl md:text-5xl lg:text-6xl">
+            <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-3xl font-bold text-transparent sm:text-3xl md:text-5xl lg:text-6xl h-[80px]">
               FullStack Developer
             </h1>
           
             {/* Responsive paragraph with adjusted max-width */}
-            <p className="mx-auto mt-3 md:mt-4 max-w-xs sm:max-w-sm md:max-w-md text-center text-sm sm:text-base font-normal text-neutral-500 dark:text-neutral-300">
+            <p className="mx-auto mt-3 md:mt-4 max-w-xs sm:max-w-sm md:max-w-md text-center text-sm sm:text-base font-normal text-neutral-500 dark:text-neutral-300 ">
               I am a passionate MERN Stack Developer with a knack for creating
               exceptional web experiences | React | Node.js | Express.js | MongoDB |
               Full Stack Expert | Tech Enthusiast | Freelancer & Content Creator
             </p>
 
             {/* Responsive button container */}
-            <div className="mt-5 md:mt-6 flex justify-center">
+            <div className="mt-5 md:mt-6 flex justify-center h-[80px]">
               <HoverBorderGradient
                 onClick={handleCopyEmail}
                 containerClassName="w-40 max-w-[200px] sm:max-w-none"
