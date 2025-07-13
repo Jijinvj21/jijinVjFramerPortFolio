@@ -167,7 +167,7 @@ const FloatingNavbar = () => {
           {/* Social Links */}
           <li className="flex gap-3 pl-4 ml-2 border-l border-white/20 text-lg md:text-2xl whitespace-nowrap w-[90px] justify-center">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/Jijinvj21"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-white transition-colors"
@@ -175,7 +175,7 @@ const FloatingNavbar = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/jijin-vj/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-white transition-colors"
@@ -183,7 +183,7 @@ const FloatingNavbar = () => {
               <FaLinkedin />
             </a>
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1Cr9fdRjXUDLzmSgpl-q1AaXP0ZhlOwJC/view"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-white transition-colors"
