@@ -116,7 +116,7 @@ function App() {
         </div>
 
         {/* Contact section */}
-        <div className="h-[250px]">
+        <div className="h-[250px]  ">
           <Contact />
         </div>
       </div>

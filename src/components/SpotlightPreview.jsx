@@ -42,29 +42,29 @@ export default function SpotlightPreview() {
 
       {/* Content - Made responsive with padding and text adjustments */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pt-10 md:pt-0">
-        <div className="flex justify-center">
-          <div className="w-full max-w-4xl">
+        <div className="flex justify-center items-center">
+          <div className="w-full max-w-4xl flex flex-col items-center text-center gap-8">
             {/* GradualSpacing wrapper with responsive text size */}
             <div className="mb-4 md:mb-6 text-center">
               <GradualSpacing 
                 text="JIJIN VJ" 
-                className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-6xl font-bold text-transparent sm:text-3xl md:text-5xl lg:text-6xl h-[80px]" 
+                className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-6xl font-bold text-transparent sm:text-3xl md:text-5xl lg:text-6xl " 
               />
             </div>
             
-            <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-3xl font-bold text-transparent sm:text-3xl md:text-5xl lg:text-6xl h-[80px]">
+            <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-3xl font-bold text-transparent sm:text-3xl md:text-5xl lg:text-6xl ">
               FullStack Developer
             </h1>
           
             {/* Responsive paragraph with adjusted max-width */}
-            <p className="mx-auto mt-3 md:mt-4 max-w-xs sm:max-w-sm md:max-w-md text-center text-sm sm:text-base font-normal text-neutral-500 dark:text-neutral-300 ">
+            <p className="w-11/12 text-center self-center text-sm sm:text-base font-normal text-neutral-500 dark:text-neutral-300  ">
               I am a passionate MERN Stack Developer with a knack for creating
               exceptional web experiences | React | Node.js | Express.js | MongoDB |
               Full Stack Expert | Tech Enthusiast | Freelancer & Content Creator
             </p>
 
             {/* Responsive button container */}
-            <div className="mt-5 md:mt-6 flex justify-center h-[80px]">
+            <div className="mt-5 md:mt-6 flex justify-center ">
               <HoverBorderGradient
                 onClick={handleCopyEmail}
                 containerClassName="w-40 max-w-[200px] sm:max-w-none"

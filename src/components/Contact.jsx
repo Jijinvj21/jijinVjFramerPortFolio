@@ -37,11 +37,11 @@ export default function Contact() {
           <div className="text-center space-y-2">
             <GradualSpacing
               text="Ready to take your digital"
-              className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-3xl  sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent"
+              className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-2xl  sm:text-4xl md:text-5xl  lg:text-6xl font-bold text-transparent"
             />
             <GradualSpacing
               text="presence to the next level?"
-              className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent"
+              className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-transparent"
             />
           </div>
 

@@ -8,7 +8,7 @@ import { Separator } from './ui/Separator';
 function AboutSection() {
   return (
     <div className="flex items-center justify-center  p-5 m-5">
-      <div className="container mx-auto flex flex-col md:flex-row items-center gap-40 max-w-5xl">
+      <div className="container mx-auto flex flex-col md:flex-row items-center gap-40 md:max-w-5xl max-w-11/12">
         
         {/* Left image */}
        <div className="md:w-1/3 w-11/12 flex flex-col justify-center items-center text-center">
