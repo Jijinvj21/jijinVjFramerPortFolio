@@ -29,7 +29,7 @@ export const CardWithImage = ({ children }) => {
         loading="lazy"
       />
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-black/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/20 to-black/10"></div>
 
       {/* Card content */}
       {children ?? (
