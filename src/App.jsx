@@ -13,7 +13,8 @@ import CardHoverEffectDemo from "./components/CardHoverEffectDemo";
 import FloatingNavbar from "./components/ui/FloatingNavbar";
 import Contact from "./components/Contact";
 import { ExperienceCard } from "./components/ui/ExperienceCard";
-
+import { Helmet } from "react-helmet";
+import jvicon from "./assets/jv.svg"
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -35,6 +36,17 @@ function App() {
   }
   return (
     <div className="bg-black">
+        <Helmet>
+        <title>Jijin VJ | Portfolio</title>
+        <meta name="description" content="Portfolio of Jijin VJ - Frontend Developer with a focus on React, Framer Motion, and modern web technologies." />
+        <meta property="og:title" content="Jijin VJ | Portfolio" />
+        <meta property="og:description" content="Explore the projects and experience of Jijin VJ, a passionate frontend developer skilled in building modern UI/UX with React and Framer Motion." />
+        <meta property="og:image" content={jvicon} />
+        <meta property="og:site_name" content="Jijin Portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image:width" content="250" />
+        <meta property="og:image:height" content="141" />
+      </Helmet>
       <FloatingNavbar />
 
       {/* Home section*/}
