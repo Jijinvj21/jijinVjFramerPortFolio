@@ -118,10 +118,9 @@ export const HoverEffect = ({ items, className }) => {
                 } />
               </div>
             </div>
-            <div className="absolute top-4 right-4 opacity-70 group-hover:opacity-100 transition-opacity">
-              <ArrowIcon />
-            </div>
+            
           </Card>
+         
         </a>
       ))}
     </div>

@@ -69,38 +69,39 @@ function App() {
       <div className="mb-auto" id="home">
         <SpotlightPreview />
       </div>
-      <div id="about">
+      <div id="about" className="!mt-20">
         {/* Separator 1  */}
-        <div className="flex justify-center w-full h-[10rem] ">
-          <div className="w-60">
+        {/* <div className="flex justify-center w-full h-[10rem] "> */}
+          {/* <div className="w-60">
             <Separator label="ABOUT ME" gradient />
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
 
         {/* About section */}
-        <div className="" id="about">
+        <div className=" flex justify-center !mx-6" id="about">
           <AboutSection />
         </div>
       </div>
       <div id="tools">
         {/* Separator 2  */}
-        <div className="flex justify-center w-full h-[10rem] items-center">
-          <div className="w-60">
+        <div className="flex justify-center w-full h-[4rem] items-center">
+          {/* <div className="w-60">
             <Separator label="TOOLS" gradient />
-          </div>
+          </div> */}
         </div>
 
         {/* Skills section  */}
         <div className="mt-16">
           <InfiniteMovingTechDemo />
         </div>
+        
       </div>
       <div id="projects">
         {/* Separator 3 */}
-        <div className="flex justify-center w-full h-[10rem] items-center">
-          <div className="w-60">
+        <div className="flex justify-center w-full h-[4rem] items-center">
+          {/* <div className="w-60">
             <Separator label="PROJECTS" gradient />
-          </div>
+          </div> */}
         </div>
 
         {/* project section */}
@@ -111,9 +112,9 @@ function App() {
       <div id="expreance" className="">
         {/* Separator 4 */}
         <div className="flex justify-center w-full h-[10rem] items-center">
-          <div className="w-60">
+          {/* <div className="w-60">
             <Separator label="EXPREANCE" gradient />
-          </div>
+          </div> */}
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 flex-wrap">
           <ExperienceCard
@@ -138,9 +139,9 @@ function App() {
       <div id="contact" className="">
         {/* Separator 5 */}
         <div className="flex justify-center w-full h-[10rem] items-center">
-          <div className="w-60">
+          {/* <div className="w-60">
             <Separator label="CONTACT" gradient />
-          </div>
+          </div> */}
         </div>
 
         {/* Contact section */}

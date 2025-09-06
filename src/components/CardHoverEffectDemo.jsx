@@ -20,7 +20,7 @@ export const projects = [
     tech: "React, Tailwind CSS, Figma,Git ",
   },
   {
-    title: "Tally Accounting Software",
+    title: "Accounting Software",
     description: "A modern accounting and inventory management system inspired by Tally, designed for small and medium businesses.",
     link: "https://bill-tree-frontend-v1.vercel.app/sign-in",
     tech: "React, Tailwind CSS, Sass,Vite,Figma, Redux, Git",
@@ -38,7 +38,7 @@ export const projects = [
     tech: "Sass,Vite,Figma, Redux, Git, React",
   },
   {
-    title: "Password Generator Tool",
+    title: "Password Generator",
     description: "A secure password generator with custom options and Firebase integration for user management and storage.",
     link: "https://password-generater-w-react-firebase.netlify.app/",
     tech: "React, Firebase, Express, Tailwind CSS , Git",

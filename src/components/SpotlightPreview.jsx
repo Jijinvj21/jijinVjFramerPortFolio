@@ -4,6 +4,7 @@ import { Spotlight } from "./ui/Spotlight";
 import { cn } from "../utils/cn";
 import { GradualSpacing } from "./ui/GradualSpacing";
 import { HoverBorderGradient } from "./ui/HoverBorderGradient";
+import AnimatedText from "./ui/AnimatedText";
 
 export default function SpotlightPreview() {
   const [copied, setCopied] = useState(false);
@@ -52,9 +53,10 @@ export default function SpotlightPreview() {
               />
             </div>
             
-            <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-3xl font-bold text-transparent sm:text-3xl md:text-5xl lg:text-6xl ">
+            {/* <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-3xl font-bold text-transparent sm:text-3xl md:text-5xl lg:text-6xl ">
               FullStack Developer
-            </h1>
+            </h1> */}
+            <AnimatedText />
           
             {/* Responsive paragraph with adjusted max-width */}
             <p className="w-11/12 text-center self-center text-sm sm:text-base font-normal text-neutral-500 dark:text-neutral-300  ">
