@@ -78,7 +78,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const TypewriterText = () => {
-  const texts = ["FullStack Developer", "React js Developer", "Node.js Developer"];
+  const texts = ["FullStack Developer", "React js Developer", "Node.js Developer",'Freelancer'];
   const [displayedText, setDisplayedText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);

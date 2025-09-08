@@ -21,7 +21,7 @@ export default function SpotlightPreview() {
   };
 
   return (
-    <div className="relative flex  h-[50rem] w-full items-center justify-center overflow-hidden bg-white dark:bg-black py-10 md:py-0">
+    <div className="relative flex  h-[40rem] md:h-[55rem] w-full items-center justify-center overflow-hidden bg-white dark:bg-black py-10 md:py-0">
       {/* Grid background */}
       <div
         className={cn(
@@ -34,7 +34,7 @@ export default function SpotlightPreview() {
 
       {/* Spotlight - Adjusted positions for different screens */}
       <Spotlight
-        className="-top-24 left-0 md:-top-20 md:left-60"
+        className="-top-20 left-0 md:-top-20 md:left-60"
         fill="white"
       />
 
@@ -42,7 +42,7 @@ export default function SpotlightPreview() {
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
 
       {/* Content - Made responsive with padding and text adjustments */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pt-10 md:pt-0">
+      <div className="relative z-10 mx-auto w-full max-w-7xl !px-4 !pt-0 md:pt-0">
         <div className="flex justify-center items-center">
           <div className="w-full max-w-4xl flex flex-col items-center text-center gap-8">
             {/* GradualSpacing wrapper with responsive text size */}
@@ -60,9 +60,9 @@ export default function SpotlightPreview() {
           
             {/* Responsive paragraph with adjusted max-width */}
             <p className="w-11/12 text-center self-center text-sm sm:text-base font-normal text-neutral-500 dark:text-neutral-300  ">
-              I am a passionate MERN Stack Developer with a knack for creating
-              exceptional web experiences | React | Node.js | Express.js | MongoDB |
-              Full Stack Expert | Tech Enthusiast | Freelancer & Content Creator
+             I’m a freelance web developer specializing in React, JavaScript, and modern frontend development. I help businesses build responsive, SEO-optimized, and high-performance websites that deliver results.
+<br />
+React | Node.js | Express.js | MongoDB | Full-Stack Development | Tech Enthusiast | Freelancer | Content Creator
             </p>
 
             {/* Responsive button container */}

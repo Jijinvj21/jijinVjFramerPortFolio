@@ -19,7 +19,7 @@ const VSCodeIcon = () => (
 
 export default function InfiniteMovingTechDemo() {
   return (
-    <div className="h-[10rem] rounded-md flex flex-col antialiased bg-gradient-to-b  items-center justify-center relative overflow-hidden p-4">
+    <div className="h-[4rem] rounded-md flex flex-col antialiased bg-gradient-to-b  items-center justify-center relative overflow-hidden ">
      
       <InfiniteMovingCards
         items={techItems}

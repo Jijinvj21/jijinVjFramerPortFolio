@@ -101,10 +101,12 @@ export const HoverEffect = ({ items, className }) => {
             <div className="flex flex-col justify-between items-center h-full p-6 gap-4 w-full">
               <div className="flex flex-col items-center w-full gap-4">
                 <CardTitle>
-                  <LettersPullUp text={item.title} />
+                  <p>{item.title}</p>
+                  {/* <LettersPullUp text={item.title} /> */}
                 </CardTitle>
                 <CardDescription>
-                  <LettersPullUp text={item.description} />
+                  <p>{item.description}</p>
+                  {/* <LettersPullUp text={item.description} /> */}
                 </CardDescription>
               </div>
               

@@ -9,7 +9,6 @@ import {
   FaUser,
   FaTools,
   FaProjectDiagram,
-  FaBriefcase,
   FaEnvelope,
 } from "react-icons/fa";
 
@@ -23,8 +22,7 @@ const FloatingNavbar = () => {
     { id: "about", label: "About", icon: <FaUser /> },
     { id: "tools", label: "Tools", icon: <FaTools /> },
     { id: "projects", label: "Projects", icon: <FaProjectDiagram /> },
-    { id: "expreance", label: "Experience", icon: <FaBriefcase /> },
-    // { id: "contact", label: "Contact", icon: <FaEnvelope /> },
+    { id: "contacts", label: "Contact", icon: <FaEnvelope /> },
   ];
 
   useEffect(() => {
@@ -84,7 +82,7 @@ const FloatingNavbar = () => {
           rounded-full shadow-lg px-2 py-2 md:px-6 md:py-3 
           transition-all duration-300 max-w-[100vw] overflow-x-auto scrollbar-hide`}
       >
-        <ul className="flex flex-nowrap items-center gap-3 md:gap-4 text-sm md:text-base justify-center h-[2.5rem] md:w-3xl px-2">
+        <ul className="flex flex-nowrap items-center gap-3 md:gap-4 text-sm md:text-base justify-center h-[2.5rem] !pr-4  !pl-2">
           {/* Logo */}
           <li className="pr-4 mr-2 border-r border-white/20 text-white font-bold text-lg md:text-xl whitespace-nowrap w-[55px] md:text-start text-center">
             <Link
@@ -121,7 +119,7 @@ const FloatingNavbar = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                offset={-70}
+                offset={section.id === "contacts" ? 0 : -70} // 👈 FIXED HERE
                 className={`relative px-4 py-2 md:px-6 md:py-3 rounded-full cursor-pointer font-semibold transition-colors whitespace-nowrap ${
                   activeSection === section.id
                     ? "text-white"
