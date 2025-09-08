@@ -1,9 +1,9 @@
-// components/ContactForm.jsx
 "use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
+import toast, { Toaster } from "react-hot-toast"; // ✅ import toast
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -15,15 +15,10 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  // Handle input change
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Validation
   const validate = () => {
     let newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Name is required";
@@ -36,47 +31,68 @@ export default function ContactForm() {
     return newErrors;
   };
 
-  // Submit handler (with dummy API)
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  const validationErrors = validate();
-  if (Object.keys(validationErrors).length > 0) {
-    setErrors(validationErrors);
-    return;
-  }
-  setErrors({});
-  setIsSubmitting(true);
-
-  try {
-    const response = await fetch(
-      "https://notion-to-portfolo-form.vercel.app/submit-to-notion",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error("Failed to send message");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      // show toast for validation errors
+      // toast.success("Please fix the errors in the form!");
+      return;
     }
+    setErrors({});
+    setIsSubmitting(true);
 
-    setSuccess(true);
-    setFormData({ name: "", email: "", message: "" });
-  } catch (error) {
-    console.error(error);
-    alert("Something went wrong! Please try again.");
-  } finally {
-    setIsSubmitting(false);
-    setTimeout(() => setSuccess(false), 3000);
-  }
-};
+    try {
+      const response = await fetch(
+        "https://notion-to-portfolo-form.vercel.app/submit-to-notion",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
+      const data = await response.json();
+
+      if (!response.ok) {
+        // show toast for backend errors
+        toast.error(data.error || "Failed to send message");
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      setSuccess(true);
+      setFormData({ name: "", email: "", message: "" });
+      toast.success("Message sent successfully!");
+    } catch (error) {
+      console.error(error);
+      // fallback toast
+      toast.error(error.message || "Something went wrong!");
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSuccess(false), 3000);
+    }
+  };
 
   return (
-    <div className="w-full md:w-1/2 mx-auto md:!mt-8 rounded-lg shadow-md ">
+    <div className="w-full md:w-1/2 mx-auto md:!mt-8 rounded-lg shadow-md">
+      {/* <Toaster position="top-right" reverseOrder={false} /> ✅ Add toaster */}
+            <Toaster
+        position="top-right"
+        reverseOrder={false}
+        toastOptions={{
+          className:
+            "backdrop-blur-md !bg-red-500/10 border !border-red-300/10 !text-red-500 shadow-lg rounded-xl px-4 py-2 mb-2",
+          success: {
+            className:
+              "backdrop-blur-md !bg-green-500/10 border border-green-300/10 !text-green-500 shadow-lg rounded-xl px-4 py-2 mb-2",
+          },
+          error: {
+            className:
+              "backdrop-blur-md !bg-red-500/10 border !border-red-300/10 !text-red-500 shadow-lg rounded-xl px-4 py-2 mb-2",
+          },
+        }}
+      />
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Name & Email */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -111,7 +127,7 @@ const handleSubmit = async (e) => {
         </div>
 
         {/* Message */}
-        <div className="!mb-4 ">
+        <div className="!mb-4">
           <label className="block text-gray-300 !mb-2">Message *</label>
           <textarea
             name="message"
